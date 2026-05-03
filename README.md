@@ -1,11 +1,17 @@
-<p align="center">
-  <img src="Metrobank Learn.png" alt="MBLearn Logo" width="600">
-</p>
+<div align="center">
+  <img src="your-logo-path.png" alt="Metrobank Learn Logo" width="400">
 
-<p align="center">
-  <i>OPTIMIZING TRAINING ACCESSIBILITY: DEVELOPING AN ONLINE LEARNING WEB APPLICATION FOR METROBANK TO REDUCE OPERATIONAL COST</i>
-</p>
+  <br />
+  <br />
 
+  ### OPTIMIZING TRAINING ACCESSIBILITY: DEVELOPING AN ONLINE LEARNING WEB APPLICATION FOR METROBANK TO REDUCE OPERATIONAL COST
+
+  <br />
+</div>
+
+---
+
+<br />
 
 
 ## 📖 Project Overview
