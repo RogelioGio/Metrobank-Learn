@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Metrobank Learn.png" alt="MBLearn Logo" width="200">
+  <img src="Metrobank Learn.png" alt="MBLearn Logo" width="600">
 </p>
 
 <p align="center">
