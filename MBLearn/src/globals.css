@@ -1,0 +1,97 @@
+/* Text Fonts */
+@font-face {
+    font-family: Gilroy-Regular;
+    src: url('./assets/font/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Header Font */
+@font-face {
+    font-family: Gilroy-Bold;
+    src: url('./assets/font/Gilroy-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    /*Colors*/
+    --Primary-Color: hsl(218,97%,26%);
+    --DarkBackgroundPrimary : hsl(218, 97%, 65%);
+    --Primay-BG-pastel: hsl(222, 74%, 75%);
+    --Secondary-Primary-Color: hsl(218, 97%, 85%);
+    --Primary-Color-Hover: hsl(218, 97%, 33%);
+    --Darker-Primary-Color: hsl(218,97%,20%);
+    --Unactive-Color: hsl(0,0%,40%);
+    --Darker-Unactive-Color: hsl(0, 0%, 20%);
+    --White: hsl(0,0%,100%);
+    --Black: hsl(0,0%,0%);
+    --Background-Color: hsl(0,0%,95%);
+    --Secondary-Background-Color: hsl(210, 12%, 98%);
+    --Divider: hsl(218,15%,75%);
+    --DashboardBackground-Color: hsl(0,0%,90%);
+
+    /* CompELearn */
+    --Background-Color: hsl(0,0%,95%);
+    --Button: #4d269c;
+    --Border: #4d269c;
+    --gradient1: #0094f7;
+    --gradient2: #002bcf;
+    --gradient3: #033d87;
+    --modalBackground: #d6e0ff;
+    --primaryButton: #0094f7;
+    --pending:#bf9e00;
+    --positive: #408703;
+    --negative: #990000;
+    --Unactive-Color-RGB: 0, 0, 0;
+
+    /* Font */
+    --textFont: 'Gilroy-Regular', sans-serif;
+    --headerFont: 'Gilroy-Bold', sans-serif;
+        font-size: 16px;
+
+    /*Note*/
+    /*for measurements, as much as possible divisible by 4*/
+    /*for responsiveness just use this:
+    Screen Size	min-width
+    min-width: 768px
+    min-width: 1280px
+    min-width: 1600px
+    min-width: 1920px
+    min-width: 2520px
+    @media (min-width: 1280px) {
+
+    }
+    @media (min-width: 1600px) {
+
+    }
+    @media (min-width: 1920px) {
+
+    }
+    @media (min-width: 2520px) {
+
+    }
+  */
+
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+    -webkit-appearance: none;
+  }
+
+  .ProseMirror:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+  /* Explicitly target vertical and horizontal buttons */
+  ::-webkit-scrollbar-button:vertical:decrement,
+  ::-webkit-scrollbar-button:vertical:increment,
+  ::-webkit-scrollbar-button:horizontal:decrement,
+  ::-webkit-scrollbar-button:horizontal:increment {
+    display: none;
+  }
+

@@ -1,0 +1,94 @@
+const items = () => {
+        return <>
+            <div className=" col-span-3"> <AnnouncmentCarousel hideControls={true}/></div>
+
+            <div className="w-full rounded-md flex flex-col gap-2">
+                <Select value={whatToCount} onValueChange={setWhatToCount}>
+                    <SelectTrigger className={`focus:outline-2 focus:-outline-offset-2 focus:outline-primary border-primary border-2 font-header text-primary w-full bg-white text-base py-5`}>
+                        <SelectValue placeholder="Select Content" />
+                    </SelectTrigger>
+                    <SelectContent className="font-text text-xs text-primary hover:cursor-pointer">
+                        <SelectItem value="all">All Departments</SelectItem>
+                        {
+                            department.map((item) => (
+                                <SelectItem value={item.id}>{item.department_name}</SelectItem>
+                            ))
+                        }
+                    </SelectContent>
+                </Select>
+                <div className="w-full h-full grid grid-rows-3 gap-2">
+                    <div className="w-full h-full rounded-md shadow-md bg-white border-2 border-primary px-4 py-2 flex flex-crow justify-between items-center">
+                        <p className="text-primary font-text text-xs">Distributed</p>
+                        <div className="flex flex-row gap-1 text-xl items-center font-header text-primary">
+                            <FontAwesomeIcon icon={faBook}/>
+                            <p>100 <span className="font-text text-xs">courses</span></p>
+                        </div>
+                    </div>
+                    <div className="w-full h-full rounded-md shadow-md bg-white border-2 border-primary px-4 py-2 flex flex-row  justify-between items-center">
+                        <p className="text-primary font-text text-xs">Actively Using </p>
+                        <div className="flex flex-row gap-1 text-xl items-center font-header text-primary">
+                            <FontAwesomeIcon icon={faBookOpen}/>
+                            <p>100 <span className="font-text text-xs">courses</span></p>
+                        </div>
+                    </div>
+                    <div className="w-full h-full rounded-md shadow-md bg-white border-2 border-primary px-4 py-2 flex flex-row  justify-between items-center">
+                        <p className="text-primary font-text text-xs">Archived </p>
+                        <div className="flex flex-row gap-1 text-xl items-center font-header text-primary">
+                            <FontAwesomeIcon icon={faBookmark}/>
+                            <p>100 <span className="font-text text-xs">courses</span></p>
+                        </div>
+                    </div>
+                </div>
+                {/* <div className="w-full h-full rounded-md shadow-md bg-white border p-4 flex flex-col gap-2">
+
+                </div> */}
+            </div>
+
+            <div className="">
+                <Select value={whatDivision} onValueChange={setWhatDivision}>
+                    <SelectTrigger className={`focus:outline-2 focus:-outline-offset-2 focus:outline-primary border-primary border-2 font-header text-primary w-full bg-white text-base py-5`}>
+                        <SelectValue placeholder="Select Content" />
+                    </SelectTrigger>
+                    <SelectContent className="font-text text-xs text-primary hover:cursor-pointer">
+                        <SelectItem value="0">All Departments</SelectItem>
+                        {
+                            department.map((item) => (
+                                <SelectItem value={item.id}>{item.department_name}</SelectItem>
+                            ))
+                        }
+                    </SelectContent>
+                </Select>
+            </div>
+
+            <div className="col-span-2 flex flex-row justify-between items-center border-divider gap-2">
+                <div className=' inline-flex flex-row place-content-between border-2 border-primary rounded-md font-text shadow-md w-full'>
+                    <div className='bg-primary py-2 px-4 text-white'>
+                        <FontAwesomeIcon icon={faSearch}/>
+                    </div>
+                    <input type="text" className='focus:outline-none text-sm px-4 w-full rounded-md bg-white' placeholder='Search Disvision...'/>
+                </div>
+            </div>
+
+            <div className="col-span-4 mb-4">
+                {/* Will be expanding */}
+                <div className="h-full rounded-md shadow-md bg-white border p-4 mb-4">
+                    <div className="grid grid-cols-4 col-span-4 gap-2 w-full h-fit">
+                        {
+                            divisions.map((division, index) => (
+                                <div key={index} className="text-primary border-2 border-primary rounded-md p-4 flex flex-row justify-between items-center gap-2 shadow-md h-fit hover:cursor-pointer hover:bg-primary hover:text-white transition-all ease-in-out"
+                                    onClick={() => {
+                                        nav(`/SubjectMatterExpert/divisioncourses/${division.id}`);
+                                        setDivision(division);
+                                    }}>
+                                    <p className="font-header text-sm">{division.division_name}</p>
+                                    <p className="font-text text-sm ">100 Courses</p>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+
+
+            </div>
+        </>
+    }

@@ -1,0 +1,182 @@
+
+
+
+.modalHeader{
+  border-radius: 12px;
+  padding: 20px;
+}
+.modalBody{
+  box-shadow: 1px 1px 4px gray;
+  background-color: var(--modalBackground);
+  border-radius: 12px;
+  padding: 24px;
+}
+:global(.btn-close) {
+
+  background-color: red; /* or any background color */
+}
+:global(.nav-tabs) {
+  border-bottom: 2px solid var(--Primary-Color);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Style each tab */
+:global(.nav-tabs .nav-link) {
+  color: var(--Unactive-Color);
+  font-size: calc(var(--header3Font-size) - 6px);
+  padding:12px;
+  padding-left: 48px;
+  padding-right: 48px;
+  background-color: transparent;
+  border: none;
+}
+
+/* Style the active tab */
+:global(.nav-tabs .nav-link.active) {
+  background-color: transparent;
+  font-family: var(--headerFont);
+  font-weight: 500;
+  color: var(--Primary-Color);
+
+}
+/* lesson setting */
+.tabContent{
+  padding: 24px;
+  display: flex;
+  flex-direction:column ;
+  justify-content: space-between;
+  height: 400px;
+}
+.buttonWrapper{
+  display: flex;
+  justify-content: flex-end;
+}
+.buttonWrapper button{
+  border: none;
+  background-color: var(--primaryButton);
+  padding: 12px;
+  padding-left: 24px;
+  padding-right: 32px;
+  border-radius: 24px;
+  color: white;
+}
+.buttonWrapper .delete{
+  background-color: var(--negative);
+}
+.buttonWrapper .delete:disabled{
+  background-color: var(--Unactive-Color);
+}
+.tabContentTop{
+  display: flex;
+  flex-direction:column;
+  gap: 12px;
+}
+.tabContentTop p{
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: var(--normalFont-size);
+  box-shadow: 1px 1px 4px gray;
+}
+.tabContentTop label{
+  font-weight: 700;
+  font-size: calc(var(--normalFont-size) + 2px);
+}
+.tabContentTop input{
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 4px gray;
+}
+.tabContentTop input:focus{
+  outline: none;
+  border: none;
+
+}
+
+/* form */
+.formLabel{
+  font-weight: 700;
+  font-size: calc(var(--normalFont-size) + 2px);
+}
+.formInput{
+  box-shadow: 1px 1px 4px gray;
+}
+.banner{
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 1px 1px 4px gray;
+  border: 2px dashed #c7c7c7;
+  height: 200px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.banner img{
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+.noImage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.noImage img{
+  height: 100px;
+}
+
+/* course settings */
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  padding: 16px;
+  gap: 24px;
+}
+.box{
+  display: flex;
+  gap: 24px;
+  height: 95%;
+}
+.box1{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.box2{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.permissionWrapper{
+  height: 100%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 1px 1px 4px gray;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+.usersWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+.userCard{
+  box-shadow: 1px 1px 4px gray;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+}

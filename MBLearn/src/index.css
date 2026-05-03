@@ -1,0 +1,237 @@
+@import url('./globals.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* Navigation Icon Class */
+    ._icon{
+        @apply text-unactive text-lg cursor-pointer hover:text-primary transition-all ease-in-out z-50;
+    }
+    .icon {
+        @apply flex z-50;
+    }
+    .icon_active{
+        @apply text-primary text-lg z-30;
+    }
+    .icon-name{
+        @apply absolute w-fit left-16 z-50 bg-tertiary text-white p-2 rounded-md text-xs scale-0 font-text transition-all ease-in-out;
+    }
+
+    /* Profile sub-menu */
+    .profile-menu-item {
+        @apply flex items-center place-content-between gap-4 font-text text-text_unhover min-w-max cursor-pointer hover:text-white transition-all ease-in-out;
+    }
+
+}
+
+/* index.css or styles.css */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+input[type="password"]::-webkit-textfield-decoration-container {
+    display: none;
+}
+.scrollbar-no-arrows::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+    -webkit-appearance: none;
+  }
+  .scrollbar-no-arrows::-webkit-scrollbar-button:vertical:decrement,
+  .scrollbar-no-arrows::-webkit-scrollbar-button:vertical:increment,
+  .scrollbar-no-arrows::-webkit-scrollbar-button:horizontal:decrement,
+  .scrollbar-no-arrows::-webkit-scrollbar-button:horizontal:increment {
+    display: none;
+  }
+
+  @layer base {
+  :root {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 3.9%;
+        --primary: 0 0% 9%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 0 0% 96.1%;
+        --secondary-foreground: 0 0% 9%;
+        --muted: 0 0% 96.1%;
+        --muted-foreground: 0 0% 45.1%;
+        --accent: 0 0% 96.1%;
+        --accent-foreground: 0 0% 9%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 89.8%;
+        --input: 0 0% 89.8%;
+        --ring: 0 0% 3.9%;
+        --chart-1: hsl(218, 97%, 26%);
+        --chart-2: hsl(218, 97%, 35%);
+        --chart-3: hsl(218, 97%, 50%);
+        --chart-4: hsl(218, 97%, 65%);
+        --chart-5: hsl(218, 97%, 85%);
+        --radius: 0.5rem;
+    }
+  .dark {
+        --background: 0 0% 3.9%;
+        --foreground: 0 0% 98%;
+        --card: 0 0% 3.9%;
+        --card-foreground: 0 0% 98%;
+        --popover: 0 0% 3.9%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 0 0% 98%;
+        --primary-foreground: 0 0% 9%;
+        --secondary: 0 0% 14.9%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 0 0% 14.9%;
+        --muted-foreground: 0 0% 63.9%;
+        --accent: 0 0% 14.9%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 14.9%;
+        --input: 0 0% 14.9%;
+        --ring: 0 0% 83.1%;
+        --chart-1: 220 70% 50%;
+        --chart-2: 160 60% 45%;
+        --chart-3: 30 80% 55%;
+        --chart-4: 280 65% 60%;
+        --chart-5: 340 75% 55%;
+    }
+}
+
+  @layer base {
+  * {
+    @apply border-border;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+}
+@layer base {
+  /* Hide event blocks inside day cells */
+  .fc-daygrid-event-harness {
+    @apply hidden !important;
+  }
+
+  /* Style day cells: border, rounded, cursor, bg, font, text alignment */
+  .fc-daygrid-day{
+    @apply border border-gray-300 bg-primary hover:cursor-pointer font-sans text-sm text-center !important;
+  }
+
+  /* Day cells hover background */
+  .fc-daygrid-day:hover {
+    @apply bg-gray-100;
+  }
+
+  /* Style today’s day cell differently */
+  .fc-day-today {
+    @apply bg-yellow-100 border-yellow-400;
+  }
+
+  /* Style weekday header cells */
+  .fc-col-header-cell {
+    @apply bg-gray-50 border-b border-gray-300 text-gray-600 font-semibold text-sm;
+  }
+
+  /* Remove default focus outline from events (if any visible) */
+  .fc .fc-event:focus {
+    outline: none;
+  }
+
+  /* Optional: style the calendar container */
+  .fc {
+    @apply bg-white rounded-lg shadow-md p-4;
+  }
+
+  /* Remove FullCalendar’s default table spacing */
+  .fc table {
+    @apply border-collapse border-spacing-0;
+  }
+}
+
+/* md screen styles */
+/* sm screen style */
+
+html,body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--Background-Color);
+  font-family: var(--textFont);
+  box-sizing: border-box;
+
+}
+::-webkit-scrollbar {
+  width: 16px;
+
+}
+::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: var(--Background-Color);
+  border: 1px solid #cacaca;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+  background-color: var(--Primary-Color);
+}
+
+
+@media (min-width: 0px) {
+  :root {
+    --normalFont-size: 12px;
+    --header1Font-size: 28px;
+    --header2Font-size: 20px;
+    --header3Font-size: 16px;
+    --alertFont-size:12px;
+    --icon1Font-size: 36px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --normalFont-size: 12px;
+    --header1Font-size: 28px;
+    --header2Font-size: 20px;
+    --header3Font-size: 16px;
+    --alertFont-size:12px;
+    --icon1Font-size: 36px;
+  }
+}
+
+@media (min-width: 1600px) {
+  :root {
+    --normalFont-size: 14px;
+    --header1Font-size: 36px;
+    --header2Font-size: 28px;
+    --header3Font-size: 20px;
+    --alertFont-size:14px;
+    --icon1Font-size: 40px;
+  }
+}
+
+@media (min-width: 1920px) {
+  :root {
+    --normalFont-size: 16px;
+    --header1Font-size: 44px;
+    --header2Font-size: 36px;
+    --header3Font-size: 28px;
+    --alertFont-size:16px;
+    --icon1Font-size: 52px;
+  }
+}
+
+@media (min-width: 2520px) {
+  :root {
+    --normalFont-size: 24px;
+    --header1Font-size: 60px;
+    --header2Font-size: 52px;
+    --header3Font-size: 44px;
+    --alertFont-size:20px;
+    --icon1Font-size: 72px;
+  }
+}
+

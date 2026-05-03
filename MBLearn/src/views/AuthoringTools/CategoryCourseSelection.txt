@@ -1,0 +1,74 @@
+const items  = () =>{
+
+        return (
+            <>
+             <div className="row-span-2 mb-4">
+                    <p className="font-text text-unactive text-xs py-2">Categories</p>
+                    <ScrollArea className="h-[calc(100vh-8rem)] w-full rounded-md shadow-md bg-white border">
+                        <div className="p-4 flex flex-col gap-2">
+                            {
+                                categories.length === 0 ?
+                                Array.from({ length: 4 }).map((_, index) => (
+                                    <div key={index} className="h-14 w-full border rounded-md text-primary font-text text-sm animate-pulse shadow-md"/>
+
+                                ))
+                                : false ?
+                                <div className="h-[calc(100vh-13rem)] w-full text-unactive flex flex-col items-center justify-center">
+                                    <div className="w-24 h-24 text-primary bg-primarybg rounded-full items-center justify-center flex mb-4">
+                                        <FontAwesomeIcon icon={faXmark} className="text-5xl" />
+                                    </div>
+                                    <div className="flex flex-col items-center justify-center text-center">
+                                        <p className="text-primary font-header text-2xl">No Course yet</p>
+                                        <p className="text-xs">There is no course created, click add course to start developing future</p>
+                                    </div>
+                                </div>
+                                :
+                                categories.map((item,index)=>(
+                                    <div key={index} className={`p-2 border-2 border-primary rounded-md text-primary font-text text-sm hover:cursor-pointer hover:bg-primary hover:text-white transition-all ease-in-out ${item.category_name === tab ? "bg-primary text-white":""}`}
+                                    onClick={() => {setTab(item.category_name)}}>
+                                        {item.category_name}
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </ScrollArea>
+                </div>
+
+                <div className="col-start-4 col-span-1 mr-4">
+                    <div className=' inline-flex flex-row place-content-between border-2 border-primary rounded-md font-text shadow-md w-full'>
+                        <input type="text" className='focus:outline-none text-sm px-4 w-full rounded-md bg-white' placeholder='Search'/>
+                        <div className='bg-primary py-2 px-4 text-white'>
+                            <FontAwesomeIcon icon={faSearch}/>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-span-3 row-span-1 mr-4 mb-4">
+                    <ScrollArea className="h-[calc(100vh-9.4rem)] w-full rounded-md shadow-md bg-white border">
+                        <div className="grid grid-cols-3 gap-2 p-4">
+                            {
+                                courses?.map((item,index)=>(
+                                    <div key={index} className="shadow-md h-40 border rounded-md flex flex-col relative hover:cursor-pointer transition-all ease-in-out"
+                                        onClick={() => {navigate(`/SubjectMatterExpert/coursePlacement/${item.id}`), setCourse(item)}}>
+                                        <div className="h-full w-full bg-gradient-to-b from-[hsl(239,94%,19%)] via-[hsl(214,97%,27%)] to-[hsl(201,100%,36%)] rounded-t-md">
+                                            {/* <img src="" alt="" className="w-full h-full" /> */}
+                                        </div>
+                                        <div className="absolute p-4 w-full h-20 flex">
+                                            <div className="flex items-center justify-center border-white border-2 rounded-full font-text text-xs px-2 py-1 h-fit text-white uppercase">
+                                                <p>PUBLISHED</p>
+                                            </div>
+                                        </div>
+                                        <div className="py-2 px-4 flex flex-col gap-2 text-sm">
+                                            {/* <p>{item.CourseName}</p> */}
+                                            <p className="text-primary font-header text-sm">{item.CourseName}</p>
+                                        </div>
+                                    </div>
+
+                                ))
+                            }
+                        </div>
+                    </ScrollArea>
+                </div>
+            </>
+        )
+    }

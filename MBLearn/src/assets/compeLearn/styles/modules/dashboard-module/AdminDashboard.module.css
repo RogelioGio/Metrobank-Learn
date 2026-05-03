@@ -1,0 +1,172 @@
+
+
+.dashboardContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    width: 100%;
+    height: 100%;
+}
+
+.box1{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    flex: 3 1 auto;
+    height: 100%;
+}
+.box2{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    flex: 1 1 auto;
+    height: 100%;
+}
+
+.carouselBox {
+    grid-area: 1 / 1 / 3 / 6;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px  rgb(114, 114, 114);
+
+}
+.calendarBox {
+    grid-area: 1 / 1 / 3 / 6;
+    background-color: white;
+    /* border:2px solid var(--Primary-Color) ; */
+    border-radius: 8px;
+    /* box-shadow: 1px 1px 1px  rgb(114, 114, 114); */
+    padding: 8px;
+}
+
+.cardsBox {
+    height: 100%;
+    grid-area: 3 / 1 / 4 / 6;
+
+}
+.cardsBox h1{
+    color: var(--Primary-Color);
+    font-size: 1.5rem;
+}
+.card h1{
+    display: flex;
+    justify-content: center;
+    margin:0;
+    font-size: 1.5rem;
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    /* border:2px solid var(--Primary-Color); */
+    border-radius: 8px;
+    padding: 8px;
+    background-color: white;
+    /* box-shadow: 1px 1px 1px  rgb(114, 114, 114); */
+    width: 20%;
+}
+.card p{
+    color: var(--Primary-Color);
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}
+.cardInfo{
+    height: 100%;
+}
+.icon{
+    font-size: 2rem;
+    color: var(--Primary-Color);
+}
+
+.coursesBox {
+    grid-area: 4 / 1 / 6 / 6;
+    border-radius: 8px;
+    padding: 16px;
+    flex: 1;
+    background-color: white;
+}
+.coursesBox h3{
+    color: var(--Primary-Color);
+    font-size: 1.5rem;
+}
+.table {
+    min-height: 0;
+    overflow-y: auto;
+    height: 85%;
+}
+
+.courseList {
+    width: 100%;
+}
+
+.courseList tr th,
+.courseList td {
+    font-size: 1rem;
+    padding: 8px;
+    text-align: left;
+    width: 33.33%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+
+.tableWrapper tr:nth-child(odd) {
+    background-color: var(--Tertiary-Primary-Color);
+}
+
+.courseList a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.categoriesBox {
+    grid-area: 3 / 1 / 6 / 6;
+    border-radius: 8px;
+    background-color: white;
+    padding: 16px;
+}
+.categoriesBox h3 {
+    font-size: 1.5rem;
+    color: var(--Primary-Color);
+}
+.categories{
+    overflow: auto;
+    height: 90%;
+}
+.course {
+    padding: 8px;
+    padding-left: 12px;
+    font-size: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.categories > a:nth-child(odd):hover .course,
+.categories > a:nth-child(even):hover .course {
+    background-color: rgb(182, 182, 182);
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.categories > a:nth-child(odd) .course {
+    background-color: var(--Tertiary-Primary-Color);
+}
+
+.courseList tr:nth-child(even){
+    background-color: var(--Tertiary-Primary-Color);
+}
+

@@ -1,0 +1,26 @@
+    // const items = () => {
+    //     return (
+    //         <>
+    //              <div  className="bg-white w-full h-full rounded-md shadow-md border p-4 gap-2 col-span-4 grid grid-cols-4 grid-rows-[min-content_1fr]">
+    //                 {
+    //                     courses.map((item, index) => (
+    //                         <div key={index} className="shadow-md h-40 border rounded-md flex flex-col relative"
+    //                             onClick={()=>{navigate(`/SubjectMatterExpert/coursecreation/${item.id}`); setCourse(item)}}>
+    //                                 <div className="h-full w-full bg-gradient-to-b from-[hsl(239,94%,19%)] via-[hsl(214,97%,27%)] to-[hsl(201,100%,36%)] rounded-t-md">
+    //                                     <img  src={`/${course.ImagePath}`} alt="" className="w-full h-full" />
+    //                                 </div>
+    //                                 <div className="absolute p-4 w-full h-20 flex">
+    //                                     <div className="flex items-center justify-center border-white border-2 rounded-full font-text text-xs px-2 py-1 h-fit text-white uppercase">
+    //                                         <p>Reviewed</p>
+    //                                     </div>
+    //                                 </div>
+    //                                 <div className="py-2 px-4 flex flex-col gap-2 text-sm">
+    //                                     <p>{item.CourseName}</p>
+    //                                 </div>
+    //                             </div>
+    //                     ))
+    //                 }
+    //             </div>
+    //         </>
+    //     )
+    // }
