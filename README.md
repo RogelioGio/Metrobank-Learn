@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="your-logo-path.png" alt="Metrobank Learn Logo" width="400">
+     <img src="Metrobank Learn.png" alt="MBLearn Logo" width="500">
 
   <br />
   <br />
